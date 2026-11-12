@@ -14,7 +14,12 @@ const app = document.querySelector("#app");
 // Estructura básica de la pantalla
 const landing = `
   <section class="landing">
-   </div> <img src="./assets/menu/menu.png"> </div>
+    <h1>Bienvenido a la PokéAPP</h1>
+    <h2>Elige un menú para empezar</h2>
+    <p>¿QUIERES UN POCO DE AMBIENTACIÓN?</p>
+        <audio controls autoplay loop>
+    <source src="./assets/sound/Cancion menú.mp3" type="audio/mpeg">
+</audio>
   </section>
 `;
 
