@@ -27,7 +27,6 @@ const landing = `
     <source src="./assets/sound/Cancion menú.mp3" type="audio/mpeg">
 </audio>
     </div>
-    </div>
   </section>
 `;
 
@@ -65,20 +64,12 @@ function cargarPokedex() {
   for (let pokemon of pokemones) {
     pokedexGallery.innerHTML += `
       <article class="pokemon-card">
-
         <div class="pokemon-image">
-          <img 
-            src="${pokemon.imagen}" 
-            alt="${pokemon.nombre}"
-          />
+          <img src="${pokemon.imagen}" alt="${pokemon.nombre}" />
         </div>
 
         <div class="pokemon-info">
-
-          <span class="pokemon-id">
-            N.º ${pokemon.id}
-          </span>
-
+          <span class="pokemon-id">N.º ${pokemon.id}</span>
           <h2>${pokemon.nombre}</h2>
 
           <div class="pokemon-types">
@@ -87,20 +78,63 @@ function cargarPokedex() {
             </span>
           </div>
 
-          <p class="pokemon-rareza">
-            ${pokemon.rareza}
-          </p>
+          <p class="pokemon-rareza">${pokemon.rareza}</p>
 
           <button class="btn-detalle" data-id="${pokemon.id}">
             Ver detalles
           </button>
-
         </div>
-
       </article>
     `;
   }
+
+  pokedexGallery.addEventListener("click", function(event) {
+    const boton = event.target.closest(".btn-detalle");
+
+    if (boton) {
+      mostrarDetallePokemon(Number(boton.dataset.id));
+    }
+  });
 }
+
+function mostrarDetallePokemon(id) {
+  const pokemon = pokemones.find(p => p.id === id);
+
+  if (!pokemon) return;
+
+  app.innerHTML = `
+    <section class="detalle-section">
+
+      <button id="btn-volver">Volver a la Pokédex</button>
+
+      <h1>${pokemon.nombre}</h1>
+
+      <img src="${pokemon.imagen}" alt="${pokemon.nombre}">
+
+      <p><strong>Descripción:</strong> ${pokemon.descripcion}</p>
+      <p><strong>Tipo:</strong> ${pokemon.tipo.join(" / ")}</p>
+      <p><strong>Altura:</strong> ${pokemon.altura} m</p>
+      <p><strong>Peso:</strong> ${pokemon.peso} kg</p>
+      <p><strong>Habilidad:</strong> ${pokemon.habilidad}</p>
+      <p><strong>Generación:</strong> ${pokemon.generacion}</p>
+      <p><strong>HP:</strong> ${pokemon.hp}</p>
+      <p><strong>Ataque:</strong> ${pokemon.ataque}</p>
+      <p><strong>Defensa:</strong> ${pokemon.defensa}</p>
+      <p><strong>Velocidad:</strong> ${pokemon.velocidad}</p>
+      <audio controls>
+        <source src="${pokemon.sonido}" type="audio/mpeg">
+      </audio>
+      <p><strong>Shiny:</strong> ${pokemon.shiny ? "Sí" : "No"}</p>
+      ${pokemon.shiny ? `<img src="${pokemon.imagenShiny}" alt="${pokemon.nombre} Shiny">` : ""}
+    </section>
+  `;
+    
+  document.querySelector("#btn-volver").addEventListener("click", function() {
+    app.innerHTML = pokedex;
+    cargarPokedex();
+  });
+}
+
 
 // Evento del botón Pokédex
 const botonPokedex = document.querySelector("#link-pokedex");

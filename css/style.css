@@ -488,3 +488,45 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
 }
+
+
+/* DETALLES DEL POKEMON */
+
+.detalle-section {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  background-color: rgb(165, 222, 230);
+  border-radius: 15px;
+  text-align: center;
+}
+
+.detalle-section h1 {
+  font-size: 32px;
+  text-transform: capitalize;
+}
+
+.detalle-section img {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.detalle-section p {
+  font-size: 16px;
+  margin: 12px;
+}
+
+#btn-volver {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+#btn-volver:hover {
+  background: #555;
+}
