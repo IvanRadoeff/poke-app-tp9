@@ -29,6 +29,24 @@
   }
 
 /* =========================
+   Inicio de sesión
+========================= */
+.sesion {
+  text-align: center;
+  margin-top: 50px;
+  
+}
+
+.formulario {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error {
+  color: red;
+}
+
+/* =========================
    RESET
 ========================= */
 

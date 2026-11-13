@@ -154,18 +154,22 @@ botonPokedex.addEventListener("click", function (event) {
 // Estructura básica de la pantalla
 const login = `
   <section class="login-section">
-          <h1>Iniciar sesión</h1>
+          <div class="sesion">
+            <h1>INICIAR SESIÓN</h1>
+          </div>
 
-          <form id="form-login">
-            <label for="username"> Usuario </label>
+          <div class="formulario">
+            <form id="form-login">
+              <label for="username"> Usuario </label>
 
             <input type="text" id="username" required />
 
             <label for="password"> Contraseña </label>
 
-            <input type="password" id="password" required />
-            <button type="submit">Ingresar</button>
-          </form>
+              <input type="password" id="password" required />
+              <button type="submit">Ingresar</button>
+            </form>
+          </div>
         </section>
 `;
 
@@ -218,7 +222,7 @@ botonLogin.addEventListener("click", function (event) {
         .querySelector("#form-login")
         .insertAdjacentHTML(
           "beforeend",
-          `<p class="error-message">Usuario o contraseña incorrectos</p>`,
+          `<div class="error"> ⓘ Usuario o contraseña incorrectos</div>`
         );
     }
   });

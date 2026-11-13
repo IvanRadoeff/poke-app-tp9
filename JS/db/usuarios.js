@@ -16,7 +16,8 @@ export const usuarios = [
     username: "5678",
     password: "5678",
     avatar: "./assets/avatar/Default mujer.png",
-    admin: false,
+    admin: true
+  ,
   },
 
   {
