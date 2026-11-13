@@ -1,5 +1,6 @@
 import { pokemones } from "./db/pokemones.js";
 import { usuarios } from "./db/usuarios.js";
+import { leerPokemones, leerUsuarios, guardarPokemones, guardarUsuarios } from "./persistencia.js";
 
 // ==========================================
 // ELEMENTO PRINCIPAL DE LA APLICACIÓN
@@ -60,7 +61,7 @@ const pokedex = `
 // Función para cargar los elementos dinámicos
 function cargarPokedex() {
   const pokedexGallery = document.querySelector("#pokedex-gallery");
-
+const pokemonesActuales = leerPokemones();
   for (let pokemon of pokemones) {
     pokedexGallery.innerHTML += `
       <article class="pokemon-card">
@@ -236,9 +237,12 @@ botonLogin.addEventListener("click", function (event) {
 const registro = `
   <section class="registro-section">
 
-    <h1>Registrarse</h1>
+    <div class="Registro">
+      <h1>Registrarse</h1>
+    </div>
 
-    <form id="form-registro">
+   <div class="formulario-registro">
+     <form id="form-registro">
 
       <label for="nombre">
         Nombre
@@ -275,10 +279,13 @@ const registro = `
         type="password" 
         id="nueva-password"
       />
+      </div>
 
+     <div class="boton-registro">
       <button type="submit">
         Registrarse
       </button>
+     </div>
 
     </form>
 

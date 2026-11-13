@@ -47,6 +47,24 @@
 }
 
 /* =========================
+   Registro
+========================= */
+.Registro {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.boton-registro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.formulario-registro {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* =========================
    RESET
 ========================= */
 
