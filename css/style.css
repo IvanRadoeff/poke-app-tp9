@@ -566,3 +566,259 @@ body {
 #btn-volver:hover {
   background: #555;
 }
+
+
+/* =========================
+   FORMULARIOS Y MENSAJES
+========================= */
+
+.formulario form,
+.formulario-registro form,
+.new-pokemon form {
+  display: grid;
+  gap: 10px;
+  width: min(100%, 620px);
+  margin: 20px auto;
+  text-align: left;
+}
+
+.formulario input,
+.formulario-registro input,
+.new-pokemon input,
+.new-pokemon select,
+.new-pokemon textarea,
+.battle-setup select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #333;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.formulario button,
+.formulario-registro button,
+.new-pokemon button,
+.battle-setup button,
+.battle-actions button,
+#btn-nueva-batalla {
+  padding: 11px 16px;
+  border: 2px solid #111;
+  border-radius: 8px;
+  background: var(--amarillo);
+  color: var(--negro);
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover,
+.formulario-registro button:hover,
+.new-pokemon button:hover,
+.battle-setup button:hover,
+.battle-actions button:hover,
+#btn-nueva-batalla:hover {
+  background: var(--naranja);
+}
+
+.new-pokemon {
+  margin: 35px auto;
+  padding: 25px;
+  max-width: 760px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 3px solid var(--negro);
+  border-radius: 12px;
+}
+
+.new-pokemon h2,
+.batalla-section h1,
+.pokedex-header h1 {
+  margin-bottom: 18px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.checkbox-label input {
+  width: auto;
+}
+
+.mensaje-formulario,
+.mensaje-vacio {
+  margin: 15px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.mensaje-formulario.error,
+.error {
+  color: #b00020;
+}
+
+/* =========================
+   DETALLES
+========================= */
+
+.detalle-shiny {
+  margin-top: 25px;
+}
+
+.detalle-section audio {
+  display: block;
+  margin: 20px auto;
+}
+
+/* =========================
+   BATALLA POKÉMON
+========================= */
+
+.batalla-section {
+  max-width: 1000px;
+  margin: 20px auto;
+  padding: 25px;
+  background: rgba(255, 255, 255, 0.88);
+  border: 3px solid var(--negro);
+  border-radius: 14px;
+  text-align: center;
+}
+
+.battle-setup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.battle-setup select {
+  width: min(100%, 260px);
+}
+
+.battle-arena {
+  margin-top: 25px;
+}
+
+.battle-fighters {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.battle-card {
+  padding: 18px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 12px;
+}
+
+.battle-card img {
+  display: block;
+  width: min(100%, 180px);
+  height: 160px;
+  margin: 10px auto;
+  object-fit: contain;
+}
+
+.battle-card progress {
+  width: 100%;
+  height: 18px;
+  accent-color: #36a852;
+}
+
+.battle-actions {
+  margin: 22px 0;
+}
+
+.battle-actions button {
+  margin: 6px;
+}
+
+.battle-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.battle-result {
+  margin: 15px;
+}
+
+.battle-log {
+  margin-top: 20px;
+  padding: 18px;
+  background: #fff;
+  border: 2px solid #222;
+  border-radius: 10px;
+  text-align: left;
+}
+
+.battle-log ul {
+  padding-left: 22px;
+}
+
+.battle-log li {
+  margin: 7px 0;
+}
+
+.battle-help {
+  margin-top: 10px;
+}
+
+/* Tipos adicionales */
+
+.type-fantasma {
+  background-color: #8b78a8;
+  color: #fff;
+}
+
+.type-volador {
+  background-color: #a9c4e8;
+}
+
+.type-bicho {
+  background-color: #a8b820;
+}
+
+.type-hielo {
+  background-color: #8edddd;
+}
+
+.type-lucha {
+  background-color: #c66b50;
+}
+
+.type-roca {
+  background-color: #b8a05a;
+}
+
+.type-acero {
+  background-color: #9ca6b8;
+}
+
+.type-dragon {
+  background-color: #8060d0;
+  color: #fff;
+}
+
+.type-psiquico {
+  background-color: #ef6cae;
+}
+
+@media (max-width: 600px) {
+  .battle-fighters {
+    grid-template-columns: 1fr;
+  }
+
+  .new-pokemon,
+  .batalla-section,
+  .detalle-section {
+    padding: 16px;
+  }
+
+  .user-profile-info {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}

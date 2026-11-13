@@ -16,10 +16,10 @@ export const pokemones = [
     evolucion: "Ivysaur",
     nivelEvolucion: 16,
     rareza: "Común",
-    imagen: "./assets/img/bulbasaur.png",
+    imagen: "./assets/img/Bulbasaur.png",
     sonido: "./assets/sound/bulbasaur.mp3",
     shiny: true,
-    imagenShiny: "./assets/img/bulbasaur-shiny.png",
+    imagenShiny: "./assets/img/Bulbasaur.-shiny.png",
   },
 
   {
@@ -62,10 +62,10 @@ export const pokemones = [
     evolucion: "Wartortle",
     nivelEvolucion: 16,
     rareza: "Común",
-    imagen: "./assets/img/squirtle.png",
+    imagen: "./assets/img/Squirtle.png",
     sonido: "./assets/sound/squirtle.mp3",
     shiny: true,
-    imagenShiny: "./assets/img/squirtle-shiny.png",
+    imagenShiny: "./assets/img/Squirtle-shiny.png",
   },
 
   {
@@ -200,10 +200,10 @@ export const pokemones = [
     evolucion: null,
     nivelEvolucion: null,
     rareza: "común",
-    imagen: "./assets/img/gengar.png",
+    imagen: "./assets/img/Gengar.png",
     sonido: "./assets/sound/gengar.mp3",
     shiny: true,
-    imagenShiny: "./assets/img/gengar-shiny.png",
+    imagenShiny: "./assets/img/Gengar-shiny.png",
   },
 
   {
